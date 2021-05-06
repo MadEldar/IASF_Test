@@ -6,33 +6,33 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class StudentForm {
-    @NotNull
-    @Size(min = 3)
+    @NotNull(message = "Full name is required")
+    @Size(min = 3, message = "Must have at least 3 characters")
     private String fullName;
 
-    @NotNull
-    @Size(min = 6)
+    @NotNull(message = "Password is required")
+    @Size(min = 6, message = "Must have at least 6 characters")
     private String password;
 
-    @NotNull
-    @Size(min = 6)
+    @NotNull(message = "Confirm password is required")
+    @Size(min = 6, message = "Must have at least 6 characters")
     private String confirmPassword;
 
-    @NotNull
+    @NotNull(message = "Gender is required")
     private String gender;
 
-    @NotNull
-    @Size(min = 3)
+    @NotNull(message = "Email is required")
+    @Size(min = 3, message = "Must have at least 3 characters")
     private String email;
 
-    @NotNull
-    @Size(min = 10, max = 10)
+    @NotNull(message = "Phone is required")
+    @Size(min = 10, max = 10, message = "Must have exactly 10 characters")
     private String phone;
 
     private Date dob;
 
-    @NotNull
-    @Size(min = 1)
+    @NotNull(message = "Hometown is required")
+    @Size(min = 1, message = "Must have at least 3 characters")
     private String hometown;
 
     public StudentForm() {

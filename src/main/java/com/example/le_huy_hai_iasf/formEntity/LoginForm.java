@@ -4,12 +4,12 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 
 public class LoginForm {
-    @NotNull
-    @Size(min = 3)
+    @NotNull(message = "Email is required")
+    @Size(min = 3, message = "Must have at least 3 characters")
     private String email;
 
-    @NotNull
-    @Size(min = 6)
+    @NotNull(message = "Password is required")
+    @Size(min = 6, message = "Must have at least 6 characters")
     private String password;
 
     public LoginForm() {
